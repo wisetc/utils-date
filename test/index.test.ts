@@ -1,5 +1,4 @@
-import moment from 'moment';
-import { deltaDays, startOfDay } from '../src';
+import moment, { deltaDays, startOfDay } from '../src';
 
 describe('startOfDay', () => {
   test('2020-02-01 10:15', () => {

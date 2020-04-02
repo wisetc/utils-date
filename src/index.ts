@@ -1,7 +1,5 @@
 import moment from 'moment-timezone';
 
-moment.tz.setDefault('Asia/Shanghai');
-
 export const setDefaultTimezone = moment.tz.setDefault;
 
 /**

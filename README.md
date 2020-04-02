@@ -11,8 +11,6 @@ import * as dateUtils from '@wisetc/utils-date';
 console.log(dateUtils.today());
 ```
 
-模块所对应的时区为 GMT+8.
-
 ## Local Development
 
 Below is a list of commands you will probably find useful.
