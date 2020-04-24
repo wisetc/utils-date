@@ -1,5 +1,7 @@
 import moment from 'moment-timezone';
 
+export * from './const';
+
 export const setDefaultTimezone = moment.tz.setDefault;
 
 /**
@@ -78,6 +80,15 @@ export function deltaDays(timestamp0: number, timestamp1: number): number {
   const oneDay = 24 * 3600 * 1000;
 
   return Math.floor(dur / oneDay);
+}
+
+/**
+ * 计算时间偏移天数后的时间 - 以时间戳表示
+ */
+export function addDays(timestamp: number, days: number): number {
+  return moment(timestamp)
+    .add(days, 'days')
+    .valueOf();
 }
 
 export default moment;

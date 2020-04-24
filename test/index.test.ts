@@ -1,4 +1,4 @@
-import moment, { deltaDays, startOfDay } from '../src';
+import moment, { deltaDays, startOfDay, addDays, ONE_DAY } from '../src';
 
 describe('startOfDay', () => {
   test('2020-02-01 10:15', () => {
@@ -39,5 +39,12 @@ describe('deltaDays', () => {
 
   test('today + 2h, today - 47h', () => {
     expect(deltaDays(today + 2 * oneHour, today - 47 * oneHour)).toBe(-2);
+  });
+});
+
+describe('addDays', () => {
+  test('now + 2d', () => {
+    const now = Date.now();
+    expect(addDays(now, 2)).toBe(now + 2 * ONE_DAY);
   });
 });
