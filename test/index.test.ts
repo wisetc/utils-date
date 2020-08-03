@@ -1,4 +1,10 @@
-import moment, { deltaDays, startOfDay, addDays, ONE_DAY } from '../src';
+import moment, {
+  deltaDays,
+  startOfDay,
+  addDays,
+  ONE_DAY,
+  getWeekdayText,
+} from '../src';
 
 describe('startOfDay', () => {
   test('2020-02-01 10:15', () => {
@@ -46,5 +52,11 @@ describe('addDays', () => {
   test('now + 2d', () => {
     const now = Date.now();
     expect(addDays(now, 2)).toBe(now + 2 * ONE_DAY);
+  });
+});
+
+describe('getWeekdayText', () => {
+  test('1596441902285', () => {
+    expect(getWeekdayText(1596441902285)).toBe('星期一');
   });
 });

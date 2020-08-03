@@ -91,4 +91,22 @@ export function addDays(timestamp: number, days: number): number {
     .valueOf();
 }
 
+/**
+ * 获取时间戳对应的天在一周中的表示，例如星期一
+ * @param timestamp 时间戳
+ */
+export function getWeekdayText(timestamp: number) {
+  const day = new Date(timestamp).getDay();
+  const weekdayMap = new Map([
+    [0, '日'],
+    [1, '一'],
+    [2, '二'],
+    [3, '三'],
+    [4, '四'],
+    [5, '五'],
+    [6, '六'],
+  ]);
+  return `星期${weekdayMap.get(day)}`;
+}
+
 export default moment;
