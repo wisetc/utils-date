@@ -93,10 +93,10 @@ export function addDays(timestamp: number, days: number): number {
 
 /**
  * 获取时间戳对应的天在一周中的表示，例如星期一
- * @param timestamp 时间戳
+ * @param date 时间
  */
-export function getWeekdayText(timestamp: number) {
-  const day = new Date(timestamp).getDay();
+export function getWeekdayText(date: number | string | Date) {
+  const day = new Date(date).getDay();
   const weekdayMap = new Map([
     [0, '日'],
     [1, '一'],
